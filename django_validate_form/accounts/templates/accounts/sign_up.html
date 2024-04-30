@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="container mt-5">
+        <center><h2>User Form</h2></center>
+        <br/>
+        <form method="post">
+            {% csrf_token %}    
+           <table class="table">
+                {{ form.as_table }}     
+            </table>   
+            <button type="submit" formnovalidate="formnovalidate" class="btn btn-primary">Submit</button>
+        </form> 
+    </div>
+{% endblock body %}

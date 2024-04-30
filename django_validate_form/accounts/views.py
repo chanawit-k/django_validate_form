@@ -16,7 +16,6 @@ class SampleView(TemplateView):
 
 
 class SignUpView(CreateView):
-    template_name = "accounts/sample_html.html"
-    success_url = reverse_lazy('login')
+    template_name = "accounts/sign_up.html"
+    success_url = reverse_lazy('accounts:test_template')
     form_class = UserRegistrationForm
-
